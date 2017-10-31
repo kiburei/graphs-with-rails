@@ -9,6 +9,7 @@ end
 gem 'chartkick'
 gem "highcharts-rails"
 gem 'hightop'
+gem 'groupdate', '~> 3.2'
 # smaple data
 gem 'countries'
 gem 'faker'
