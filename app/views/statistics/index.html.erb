@@ -1,1 +1,4 @@
 <h1>Statistics</h1>
+
+<%= bar_chart @sporters.group(:age).count, width: "500px", height: "50%" %>
+<%= bar_chart @sporters.top(:age, 10), width: "500px", height: "50%" %>

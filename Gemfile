@@ -8,6 +8,7 @@ end
 # Graphs
 gem 'chartkick'
 gem "highcharts-rails"
+gem 'hightop'
 # smaple data
 gem 'countries'
 gem 'faker'
