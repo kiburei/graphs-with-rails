@@ -1,5 +1,8 @@
 require_relative 'boot'
 
+require 'csv'
+require 'iconv'
+
 require "rails"
 # Pick the frameworks you want:
 require "active_model/railtie"

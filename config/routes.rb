@@ -1,6 +1,10 @@
 Rails.application.routes.draw do
   root 'statistics#index'
 
+  resources :statistics do
+    collection { post :import }
+  end
+
   resources :charts, only: [] do
   collection do
     get 'sporters_by_age'

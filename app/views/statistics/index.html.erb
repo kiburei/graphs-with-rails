@@ -1,3 +1,11 @@
+<h2>Import Data</h2>
+<%= form_tag import_statistics_path, multipart: true do %>
+  <%= file_field_tag :file %>
+  <%= submit_tag "Import" %>
+<% end %>
+<% Country.all.each do |country| %>
+  <li><%= country.id %> <%= country.name %></li>
+<% end %>
 <h1>Statistics</h1>
 <%= sporters_by_age %>
 <%= sporters_by_country %>
