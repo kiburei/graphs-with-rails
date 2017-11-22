@@ -7,7 +7,8 @@ Rails.application.routes.draw do
 
   resources :charts, only: [] do
   collection do
-    get 'internet_mobile_users'
+    get 'mobile_users'
+    get 'internet_users'
     get 'sporters_by_age'
     get 'sporters_by_country'
     get 'results_by_country'

@@ -1,8 +1,16 @@
 module StatisticsHelper
-  def internet_mobile_users
-    line_chart internet_mobile_users_charts_path, height: '500px', library: {
-      title: {text: 'Internet Mobile Users', x: -20},
+  def mobile_users
+    line_chart mobile_users_charts_path, library: {
+      title: {text: 'Mobile Users', x: -20},
       yAxis: {allowDecimals: false, title: {text: 'Mobile Users'}},
+      xAxis: {title: {text: 'Year'}}
+    }
+  end
+
+  def internet_users
+    line_chart internet_users_charts_path, download: true, library: {
+      title: {text: 'Internet Users', x: -20},
+      yAxis: {allowDecimals: false, title: {text: 'Internet Users'}},
       xAxis: {title: {text: 'Year'}}
     }
   end

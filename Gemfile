@@ -4,6 +4,9 @@ git_source(:github) do |repo_name|
   repo_name = "#{repo_name}/#{repo_name}" unless repo_name.include?("/")
   "https://github.com/#{repo_name}.git"
 end
+# Metrial Design
+gem 'materialize-sass'
+gem 'material_icons'
 # import excel files
 gem 'roo'
 gem "iconv"

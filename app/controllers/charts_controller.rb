@@ -1,7 +1,12 @@
 class ChartsController < ApplicationController
 
-  def internet_mobile_users
+  def mobile_users
     year = InternetMobileUser.all.map{ |c| [c.year,c.mobile_users] }.to_h
+    render json: [{name: 'Count', data: year}]
+  end
+
+  def internet_users
+    year = InternetMobileUser.all.map{ |c| [c.year,c.internet_users] }.to_h
     render json: [{name: 'Count', data: year}]
   end
 
