@@ -1,4 +1,12 @@
 module StatisticsHelper
+  def internet_mobile_users
+    line_chart internet_mobile_users_charts_path, height: '500px', library: {
+      title: {text: 'Internet Mobile Users', x: -20},
+      yAxis: {allowDecimals: false, title: {text: 'Mobile Users'}},
+      xAxis: {title: {text: 'Year'}}
+    }
+  end
+
   def sporters_by_age
     bar_chart sporters_by_age_charts_path, height: '500px', library: {
       title: {text: 'Sporters by age', x: -20},

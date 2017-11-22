@@ -1,5 +1,10 @@
 class ChartsController < ApplicationController
 
+  def internet_mobile_users
+    year = InternetMobileUser.all.map{ |c| [c.year,c.mobile_users] }.to_h
+    render json: [{name: 'Count', data: year}]
+  end
+
   def sporters_by_age
     result = Sporter.group(:age).count
     render json: [{name: 'Count', data: result}]

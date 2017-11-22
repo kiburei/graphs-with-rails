@@ -1,12 +1,21 @@
 <h2>Import Data</h2>
-<%= form_tag import_statistics_path, multipart: true do %>
+<%= form_tag import_internet_mobile_users_statistics_path, multipart: true do %>
   <%= file_field_tag :file %>
   <%= submit_tag "Import" %>
 <% end %>
 <% Country.all.each do |country| %>
   <li><%= country.id %> <%= country.name %></li>
 <% end %>
+
 <h1>Statistics</h1>
+<div class="row">
+  <div class="col-md-6">
+    <%= internet_mobile_users %>
+  </div>
+  <div class="col-md-6">
+    <%= internet_mobile_users %>
+  </div>
+</div>
 <%= sporters_by_age %>
 <%= sporters_by_country %>
 <%= results_by_country %>

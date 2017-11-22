@@ -1,0 +1,2 @@
+class InternetMobileUser < ApplicationRecord
+end
