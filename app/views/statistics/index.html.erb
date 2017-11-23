@@ -10,12 +10,19 @@
 <h3>Internet and Mobile User Trends</h3>
 <div class="row">
   <div class="col s6">
-    <%= mobile_users %>
+    <span id="mobile">
+      <%= mobile_users %>
+    </span>
+    <input type="button" id="svMobile" value="Save PNG"/>
   </div>
   <div class="col s6">
-    <%= internet_users %>
+    <span id="internet">
+      <%= internet_users %>
+    </span>
+    <input type="button" id="svInternet" value="Save PNG"/>
   </div>
 </div>
+
 <!-- <%= sporters_by_age %>
 <%= sporters_by_country %>
 <%= results_by_country %>

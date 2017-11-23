@@ -6,6 +6,7 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'html2canvas' %>
   </head>
     <nav>
      <div class="nav-wrapper">
@@ -15,4 +16,5 @@
   <body>
     <%= yield %>
   </body>
+  <script type="text/javascript" href="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js"></script>
 </html>
