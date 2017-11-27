@@ -14,4 +14,24 @@ class StatisticsController < ApplicationController
     end
     redirect_to root_url, notice: "Countries Added."
   end
+
+  def show
+    @internet_mobile_users = InternetMobileUser.all
+
+    respond_to do |format|
+      format.html
+      format.csv { send_data @internet_mobile_users.to_csv, filename: "internet_mobile_users.csv" }
+    end
+  end
+
+  def export_internet_mobile_users
+    @internet_mobile_users = InternetMobileUser.all
+
+    respond_to do |format|
+      # format.html
+      format.csv { send_data @internet_mobile_users.to_csv, filename: "internet_mobile_users.csv" }
+    end
+  end
+
+
 end

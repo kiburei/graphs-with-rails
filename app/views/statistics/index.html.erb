@@ -14,12 +14,14 @@
       <%= mobile_users %>
     </span>
     <input type="button" id="svMobile" value="Save PNG"/>
+    <%= link_to 'Download', import_internet_mobile_users_statistics_path("csv"), class: "btn blue" %>
   </div>
   <div class="col s6">
     <span id="internet">
       <%= internet_users %>
     </span>
     <input type="button" id="svInternet" value="Save PNG"/>
+    <%= link_to 'Download', import_internet_mobile_users_statistics_path("csv"), class: "btn blue" %>
   </div>
 </div>
 

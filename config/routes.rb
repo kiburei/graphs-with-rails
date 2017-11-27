@@ -1,9 +1,11 @@
 Rails.application.routes.draw do
   root 'statistics#index'
+  get 'statistics/export_internet_mobile_users', :to => 'statistics#export_internet_mobile_users'
 
   resources :statistics do
-    collection { post :import_internet_mobile_users }
+    collection { post :import_internet_mobile_users}
   end
+
 
   resources :charts, only: [] do
   collection do
