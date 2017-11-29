@@ -1,6 +1,6 @@
 module StatisticsHelper
   def mobile_users
-    line_chart mobile_users_charts_path, library: {
+    area_chart mobile_users_charts_path, library: {
       title: {text: 'Mobile Users', x: -20},
       yAxis: {allowDecimals: false, title: {text: 'Mobile Users'}},
       xAxis: {title: {text: 'Year'}}
